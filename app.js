@@ -55,7 +55,7 @@ app.get('/', (req, res) => {
           //  res.status('500').send(err);
 
   } else {
-            res.render('imagesPage.ejs', { items: items });
+            res.render('./views/imagesPage.ejs', { items: items });
         }
     });
 });
