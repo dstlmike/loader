@@ -1,9 +1,9 @@
 // Step 1 - set up express & mongoose
 
-var express = require('express')
-var app = express()
+var express = require('express');
+var app = express();
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
 
 var fs = require('fs');
 var path = require('path');
@@ -13,15 +13,15 @@ require('dotenv/config');
 
 mongoose.connect(process.env.MONGO_URL,
     { useNewUrlParser: true, useUnifiedTopology: true }, err => {
-        console.log('connected')
+        console.log('connected');
     });
 
     // Step 3 - code was added to ./models.js
 
 // Step 4 - set up EJS
 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // Set EJS as templating engine
 app.set("view engine", "ejs");
@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
     imgModel.find({}, (err, items) => {
         if (err) {
             console.log(err);
-            res.status(500).send('An error occurred', err);
+            res.status('500').send('An error occurred', err);
         }
         else {
             res.render('imagesPage', { items: items });
@@ -84,12 +84,12 @@ app.post('/', upload.single('image'), (req, res, next) => {
 });
 
 
-brightness_4
+
 // Step 9 - configure the server's port
 
-var port = process.env.PORT || '3000'
+var port = process.env.PORT || '3000';
 app.listen(port, err => {
     if (err)
         throw err
-    console.log('Server listening on port', port)
-})
+    console.log('Server listening on port', port);
+});
