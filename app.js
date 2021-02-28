@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
     imgModel.find({}, (err, items) => {
         if (err) {
             console.log(err);
-          //  res.status('500').send(err);
+            res.send(err);
 
   } else {
             res.render('./imagesPage.ejs', { items: items });
@@ -68,7 +68,7 @@ app.post('/', upload.single('image'), (req, res, next) => {
         name: req.body.name,
         desc: req.body.desc,
         img: {
-            data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
+            data: fs.readFileSync(path.join(__dirname + '/req.file.filename)),
             contentType: 'image/png'
         }
     }
