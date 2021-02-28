@@ -86,7 +86,7 @@ app.post('/', upload.single('image'), (req, res, next) => {
 
 // Step 9 - configure the server's port
 
-var port = process.env.PORT || '3000';
+var port = process.env.PORT || '8080';
 app.listen(port, function() { // err => {
    // if (err)
       //  throw err
