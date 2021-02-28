@@ -38,7 +38,7 @@
 
     <h1>Uploaded Images</h1>
     <div>
-        <%=items.forEach(function(image) {%>
+        <%items.forEach(function(image) {%>
         <div>
             <div>
                 <img src="data:image/<%=image.img.contentType%>;base64,
@@ -47,13 +47,13 @@
                     <h5><%=image.name%></h5>
 
 
-<p><%=image.desc%></p>
+<p><%image.desc%></p>
 
 
                 </div>
             </div>
         </div>
-        <%=})%>
+        <%})%>
     </div>
 </body>
 
