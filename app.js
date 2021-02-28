@@ -43,7 +43,7 @@ var upload = multer({ storage: storage });
 
 // Step 6 - load the mongoose model for Image
 
-var imgModel = require('./models.js');
+var imgModel = require('./model.js');
 
 
 // Step 7 - the GET request handler that provides the HTML UI
@@ -86,9 +86,9 @@ app.post('/', upload.single('image'), (req, res, next) => {
 
 // Step 9 - configure the server's port
 
-var port = process.env.PORT || '3000'
-app.listen(port, err => {
-    if (err)
-        throw err
-    console.log('Server listening on port', port);
-})
+var port = process.env.PORT || '3000';
+app.listen(port, function() { // err => {
+   // if (err)
+      //  throw err
+    console.log('Server listening on port ', port);
+});
