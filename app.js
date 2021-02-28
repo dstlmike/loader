@@ -30,14 +30,14 @@ app.set("view engine", "ejs");
 
 var multer = require('multer');
 
-var storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'uploads')
-    },
-    filename: (req, file, cb) => {
-        cb(null, file.fieldname + '-' + Date.now())
-    }
-});
+var storage = multer.memoryStorage();  // multer.diskStorage({
+//    destination: (req, file, cb) => {
+     //   cb(null, 'uploads')
+ //   },
+ //   filename: (req, file, cb) => {
+     //   cb(null, file.fieldname + '-' + Date.now())
+ //   }
+//});
 
 var upload = multer({ storage: storage });
 
@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
     imgModel.find({}, (err, items) => {
         if (err) {
             console.log(err);
-            res.send(err);
+            res.send("Error");
 
   } else {
             res.render('./imagesPage.ejs', { items: items });
@@ -89,6 +89,6 @@ app.post('/', upload.single('image'), (req, res, next) => {
 var port = process.env.PORT || '8080';
 app.listen(port, err => {
     if (err)
-       throw err
+       throw err;
     console.log('Server listening on port ', port);
-})
+});
