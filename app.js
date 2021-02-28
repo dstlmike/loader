@@ -45,7 +45,7 @@ var upload = multer({ storage: storage });
 
 var imgModel = require('./model.js');
 
-var items = null;
+//var items = null;
 // Step 7 - the GET request handler that provides the HTML UI
 
 app.get('/', (req, res) => {
