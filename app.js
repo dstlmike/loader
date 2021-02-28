@@ -52,10 +52,10 @@ app.get('/', (req, res) => {
     imgModel.find({}, (err, items) => {
         if (err) {
             console.log(err);
-            res.status('500').send(err);
+          //  res.status('500').send(err);
 
   } else {
-            res.render('imagesPage', { items: items });
+            res.render('imagesPage.ejs', { items: items });
         }
     });
 });
