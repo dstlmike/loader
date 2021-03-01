@@ -11,8 +11,8 @@ var imageSchema = new mongoose.Schema({
         contentType: String
     }
 });
-var Image = new mongoose.model('Image', imageSchema, 'uploads');
+//var Image = new mongoose.model('Image', imageSchema, 'uploads');
 
 //Image is a model which has a schema imageSchema
 
-module.exports = Image; //new mongoose.model('Image', imageSchema, 'uploads');
+module.exports = new mongoose.model('Image', imageSchema);
