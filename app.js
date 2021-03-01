@@ -69,8 +69,8 @@ app.post('/', upload.single('image'), (req, res, next) => {
         name: req.body.name,
         desc: req.body.desc,
         img: {
-            data: req.file[0].buffer, //image   //req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
-            contentType: req.file[0].mimetype //'image/png'
+            data: req.file.buffer, //image   //req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
+            contentType: req.file.mimetype //'image/png'
         }
     }
     imgModel.create(obj, (err, item) => {
