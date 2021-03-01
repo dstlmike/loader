@@ -57,6 +57,7 @@ res.send("Error");
 
   } else {
 //res.contentType(imgModel.imd.contentType);
+console.log(items);
             res.render('./imagesPage.ejs', { items: items });
         }
     });
