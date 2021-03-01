@@ -52,7 +52,8 @@ app.get('/', (req, res) => {
     imgModel.find({}, (err, items) => {
         if (err) {
             console.log(err);
-            res.status('500').send("Error");
+            res.status('500');
+res.send("Error");
 
   } else {
 //res.contentType(imgModel.imd.contentType);
