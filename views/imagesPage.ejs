@@ -41,7 +41,8 @@
         <% items.forEach(function(image) { %>
         <div>
             <div>
-                <img src="data:<% image.img %>">
+                <img src="data:<% image.img.contentType %>
+                <% image.img.data %>">
                  
                 <div>
                     <h5><%= image.name %></h5>
