@@ -56,6 +56,7 @@ app.get('/', (req, res) => {
 res.send("Error");
 
   } else {
+res.contentType(items.imd.contentType);
             res.render('./imagesPage.ejs', { items: items });
         }
     });
