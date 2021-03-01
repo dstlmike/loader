@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var Image = require('./model.js');
+//var Image = require('./model.js');
 var fs = require('fs');
 var path = require('path');
 require('dotenv/config');
@@ -72,8 +72,8 @@ app.post('/', upload.single('image'), (req, res, next) => {
         desc: req.body.desc,
         img: {
              
-            data: req.Image[0].buffer, //image   //req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
-            contentType: req.Image[0].mimetype,
+            data: req.files[0].buffer, //image   //req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
+            contentType: req.files[0].mimetype,
         },
        created: Date.now()
     }
