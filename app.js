@@ -66,16 +66,16 @@ console.log(items);
 // Step 8 - the POST handler for processing the uploaded file
 
 app.post('/', upload.single('image'), (req, res, next) => {
-
+var it
     var obj = {
         name: req.body.name,
         desc: req.body.desc,
         img: {
              
-            data: req.file.data, //image   //req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
+            data: req.file.buffer, //image   //req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
             contentType: req.file.mimetype,
         },
-       created: Date.now()
+       created: Date.now('LLLL')
     }
     imgModel.create(obj, (err, item) => {
         if (err) {
