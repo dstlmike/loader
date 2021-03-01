@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
     imgModel.find({}, (err, items) => {
         if (err) {
             console.log(err);
-            res.status('500');
+            //res.status('500');
 res.send("Error");
 
   } else {
@@ -71,10 +71,11 @@ app.post('/', upload.single('image'), (req, res, next) => {
         name: req.body.name,
         desc: req.body.desc,
         img: {
-            contentType: req.file.mimetype, //'image/png'
-            data: req.file.buffer //image   //req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
-            
-        }
+             
+            data: req.file.buffer, //image   //req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
+            contentType: req.file.mimetype,
+        },
+       created: Date.now();
     }
     imgModel.create(obj, (err, item) => {
         if (err) {
