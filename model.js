@@ -9,7 +9,8 @@ var imageSchema = new mongoose.Schema({
     {
         data: Buffer,
         contentType: String
-    }
+    },
+    created: String
 });
 //var Image = new mongoose.model('Image', imageSchema, 'uploads');
 
