@@ -72,8 +72,8 @@ app.post('/', upload.single('image'), (req, res, next) => {
         desc: req.body.desc,
         img: {
              
-            data: req.files[0].buffer, //image   //req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
-            contentType: req.files[0].mimetype,
+            data: req.files.buffer, //image   //req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
+            contentType: req.files.mimetype,
         },
        created: Date.now()
     }
