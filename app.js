@@ -73,8 +73,8 @@ var it
         desc: req.body.desc,
         img: {
              
-            data: req.file.buffer, //image   //req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
-            contentType: req.file.mimetype,
+            data: req.file[0].buffer, //image   //req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
+            contentType: req.file[0].mimetype,
         },
        created: Date.now('LLLL')
     }
