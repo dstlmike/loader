@@ -53,7 +53,7 @@ app.get('/', (req, res) => {
 //var thumb = new Buffer(image.img.data).toString('base64'); 
 
     imgModel.find({}, (err, items) => {
-var thumb = new Buffer(image.img.data).toString('base64'); 
+var thumb; //= new Buffer(image.img.data).toString('base64'); 
 
 
         if (err) {
@@ -79,7 +79,7 @@ var it
         desc: req.body.desc,
         img: {
              
-            data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)), // req.file[0].buffer, //image   //req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
+            data: req.file.buffer, //body.image, //[0].buffer, //fs.readFileSync(path.join(__dirname + req.body.image)),
             contentType: req.file.mimetype,
         },
        created: Date.now('LLLL')
