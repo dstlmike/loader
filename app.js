@@ -50,7 +50,12 @@ var imgModel = require('./model.js');
 // Step 7 - the GET request handler that provides the HTML UI
 
 app.get('/', (req, res) => {
+var thumb = new Buffer(result.image.data).toString('base64'); 
+
     imgModel.find({}, (err, items) => {
+var thumb = new Buffer(result.image.data).toString('base64'); 
+
+
         if (err) {
             console.log(err);
             //res.status('500');
@@ -58,6 +63,7 @@ res.send("Error");
 
   } else {
 //res.contentType(imgModel.imd.contentType);
+
 console.log(items);
             res.render('./imagesPage.ejs', { items: items });
         }
