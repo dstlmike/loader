@@ -53,7 +53,7 @@ app.get('/', (req, res) => {
 //var thumb = new Buffer(image.img.data).toString('base64'); 
 
     imgModel.find({}, (err, items) => {
-var thumb = new Buffer(items.img.data).toString('base64'); 
+var thumb = new Buffer(image.img.data).toString('base64'); 
 
 
         if (err) {
