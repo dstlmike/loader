@@ -39,11 +39,11 @@
     <h1>Uploaded Images</h1>
     <div>
         <% items.forEach(function(image) { %>
-<% thumb = new Buffer(image.img.data).toString('base64') %>
+
         <div>
             <div>
-                <img src="image:<%=image.img.contentType%>;base64,
-<%=thumb%>">
+                <img src="data:<%=image.img.contentType%>;base64,
+<%=image.img.data%>">
                  
                 <div>
                     <h5><%= image.name %></h5>
