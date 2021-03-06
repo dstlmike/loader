@@ -39,7 +39,7 @@
     <h1>Uploaded Images</h1>
     <div>
         <% items.forEach(function(image) { %>
-    <% var thumb = new Buffer(image.img.data).toString('base64') %>
+    <% var thumb = new Buffer('<%=image.img.data%>').toString('base64') %>
 
 
         <div>
