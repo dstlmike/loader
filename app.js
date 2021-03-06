@@ -65,7 +65,7 @@ res.send("Error");
 //res.contentType(imgModel.imd.contentType);
 
 console.log(items);
-            res.render('./imagesPage.ejs', { items: items, thumb: thumb });
+            res.render('imagesPage', { items: items, thumb: thumb });
         }
     });
 });
