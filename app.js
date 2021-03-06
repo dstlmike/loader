@@ -53,7 +53,7 @@ app.get('/', (req, res) => {
 //var thumb = new Buffer(image.img.data).toString('base64'); 
 
     imgModel.find({}, (err, items) => {
-var thumb; //= new Buffer(image.img.data).toString('base64'); 
+var thumb = new Buffer(image.img.data).toString('base64'); 
 
 
         if (err) {
@@ -65,7 +65,7 @@ res.send("Error");
 //res.contentType(imgModel.imd.contentType);
 
 console.log(items);
-            res.end('./imagesPage.ejs', { items: items });
+            res.render('./imagesPage.ejs', { items: items, thumb: thumb });
         }
     });
 });
