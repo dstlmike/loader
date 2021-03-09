@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 
-
-<script type="text/javascript"> 
+<body>
+<script> 
 function setbackground() { 
 window.setTimeout("setbackground()", 5000); // 5000 milliseconds delay 
 var index = Math.round(Math.random() * 9); 
@@ -19,5 +19,8 @@ if(index == 9) ImagePath = "./upload.png";
 document.getElementByTagName("body")[0].style.backgroundImage="url('"+ImagePath+"')" 
 } 
 </script> 
+</body>
+<script>
 <body onload="setbackground();">
+</script>
 </html>
