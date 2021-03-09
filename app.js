@@ -109,8 +109,8 @@ app.get('/images', (req, res) => {
 //  } else {
 //res.contentType(imgModel.imd.contentType);
 
-//console.log(items);
-            res.render('images');
+console.log(items);
+            res.render('images', { ImagePath: ImagePath} );
        // }
   //  });
 });
