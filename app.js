@@ -109,7 +109,7 @@ app.get('/images', (req, res) => {
 //  } else {
 //res.contentType(imgModel.imd.contentType);
 
-console.log(items);
+console.log(index);
             res.render('images', { index: index } );
        // }
   //  });
