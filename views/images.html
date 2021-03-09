@@ -1,0 +1,27 @@
+<script type="text/javascript"> 
+function setbackground() { 
+window.setTimeout( "setbackground()", 5000); // 5000 milliseconds delay 
+var index = Math.round(Math.random() * 9); 
+var ImagePath = "image0.jpg"; // default image 
+if(index == 1) 
+ImagePath = "image1.jpg"; 
+if(index == 2) 
+ImagePath = "image2.jpg"; 
+if(index == 3) 
+ImagePath = "image3.jpg"; 
+if(index == 4) 
+ImagePath = "image4.jpg"; 
+if(index == 5) 
+ImagePath = "image5.jpg"; 
+if(index == 6) 
+ImagePath = "image6.jpg"; 
+if(index == 7) 
+ImagePath = "image7.jpg"; 
+if(index == 8) 
+ImagePath = "image8.jpg"; 
+if(index == 9) 
+ImagePath = "image9.jpg"; 
+document.getElementsByTagName("body")[0].style.backgroundImage="url('"+ ImagePath+ "')" 
+} 
+</script> 
+<body onload="setbackground();">
