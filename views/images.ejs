@@ -6,26 +6,26 @@
 function setbackground() { 
 window.setTimeout( "setbackground()", 5000); // 5000 milliseconds delay 
 var index = Math.round(Math.random() * 9); 
-var ImagePath = "/views/20200712_105459(1).jpg"; // default image 
+var ImagePath = "20200712_105459(1).jpg"; // default image 
 if(index == 1) 
-ImagePath = "/views/upload.png"; 
+ImagePath = "upload.png"; 
 if(index == 2) 
-ImagePath = "/views/Mike_Fiers_monkey_tail_beard.jpg"; 
+ImagePath = "Mike_Fiers_monkey_tail_beard.jpg"; 
 if(index == 3) 
-ImagePath = "/views/Resized_542137175533_647_112_copyImage(1).jpg"; 
+ImagePath = "Resized_542137175533_647_112_copyImage(1).jpg"; 
 if(index == 4) 
-ImagePath = "/views/amazing-beach-sunset--beach-scene-with-relaxing-mood--817362204-5a9a234d31283400376e45af.jpg"; 
+ImagePath = "amazing-beach-sunset--beach-scene-with-relaxing-mood--817362204-5a9a234d31283400376e45af.jpg"; 
 if(index == 5) 
-ImagePath = "/views/favicon.ico"; 
+ImagePath = "favicon.ico"; 
 if(index == 6) 
-ImagePath = "/views/list.png"; 
+ImagePath = "list.png"; 
 if(index == 7) 
-ImagePath = "/views/logo512.png"; 
+ImagePath = "logo512.png"; 
 if(index == 8) 
-ImagePath = "/views/monkey-tail-beard12.jpg"; 
+ImagePath = "monkey-tail-beard12.jpg"; 
 if(index == 9) 
-ImagePath = "/views/upload.png"; 
-document.getElementsByTagName("body")[0].style.backgroundImage="url('"+ ImagePath+ "')" 
+ImagePath = "upload.png"; 
+document.getElementsByTagName("body")[0].style.backgroundImage="url('"+ImagePath+"')" 
 } 
 </script> 
 <body onload="setbackground();">
