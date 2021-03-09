@@ -45,7 +45,7 @@ var upload = multer({ storage: storage });
 // Step 6 - load the mongoose model for Image
 
 var imgModel = require('./model.js');
-
+var index = Math.round(Math.random() * 9); 
 //var items = null;
 // Step 7 - the GET request handler that provides the HTML UI
 
@@ -110,7 +110,7 @@ app.get('/images', (req, res) => {
 //res.contentType(imgModel.imd.contentType);
 
 console.log(items);
-            res.render('images', { ImagePath: ImagePath} );
+            res.render('images', { index: index } );
        // }
   //  });
 });
