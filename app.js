@@ -94,7 +94,26 @@ var it
     });
 });
 
+app.get('/images', (req, res) => {
+//var thumb = new Buffer(image.img.data).toString('base64'); 
 
+ //   imgModel.find({}, (err, items) => {
+//var thumb = new Buffer(items.img.data).toString('base64'); 
+
+
+      //  if (err) {
+      //      console.log(err);
+            //res.status('500');
+//res.send("Error");
+
+//  } else {
+//res.contentType(imgModel.imd.contentType);
+
+//console.log(items);
+            res.render('images');
+       // }
+  //  });
+});
 
 // Step 9 - configure the server's port
 
